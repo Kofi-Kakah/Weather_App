@@ -16,6 +16,7 @@ export default function WeatherCard({ weather }) {
                 <p className="text-gray-600">Feels like: {Math.round(weather.main.feels_like)}°C</p>
                 <p className="text-gray-600">Humidity: {weather.main.humidity}%</p>
                 <p className="text-gray-600">Wind: {weather.wind.speed} m/s</p>
+                <p className="text-gray-600">Pressure: {weather.main.pressure}</p>
             </div>
         </div>
     )

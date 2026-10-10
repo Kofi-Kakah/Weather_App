@@ -57,12 +57,12 @@ export default function WeatherDashboard() {
             {error && <p className="text-red-500">{error}</p>}
             {searched &&(
                 <div className="mt-4">
-                    <h2 className="text-2xl font-semibold mb-2">Search Result:</h2>
+                    <h2 className="text-2xl font-semibold mb-2">Search Result</h2>
                     <WeatherCard weather={searched} />
                 </div>
             )}
 
-            <h2 className="text-2xl font-semibold mt-6 mb-2">Major Cities:</h2>
+            <h2 className="text-center text-2xl font-semibold mt-6 mb-2">Major Cities</h2>
             {loading ? (
                 <p>Loading...</p>
             ) : (
