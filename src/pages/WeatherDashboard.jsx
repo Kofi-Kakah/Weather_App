@@ -71,6 +71,20 @@ export default function WeatherDashboard() {
                 <SearchBar onSearch={handleSearch} className="" />
             </div>
 
+            {recentSearches.length > 0 && (
+                <div className="mt-4 flex flex-wrap justify-center gap-2">
+                    {recentSearches.map((city, index) => (
+                        <button
+                            key={index}
+                            onClick={() => handleSearch(city)}
+                            className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition"
+                        >
+                            {city}
+                        </button>
+                    ))}
+                </div>
+            )}
+
             {loading && <Spinner size="h-16 w-16" />}
             {error && <p className="text-red-500">{error}</p>}
             {searched &&(
