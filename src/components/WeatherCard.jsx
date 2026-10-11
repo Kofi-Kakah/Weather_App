@@ -15,7 +15,7 @@ export default function WeatherCard({ weather }) {
             <p className="text-2xl font-semibold">{Math.round(weather.main.temp)}°C</p>
             <p className="text-gray-600">{condition.description}</p>
 
-            <Card className="mt-4">
+            <Card className="mt-4 p-3">
                 <p className="text-gray-600">Feels like: {Math.round(weather.main.feels_like)}°C</p>
                 <p className="text-gray-600">Humidity: {weather.main.humidity}%</p>
                 <p className="text-gray-600">Wind: {weather.wind.speed} m/s</p>
@@ -23,4 +23,4 @@ export default function WeatherCard({ weather }) {
             </Card>
         </div>
     )
-}
+}q
