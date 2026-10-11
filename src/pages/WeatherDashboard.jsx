@@ -3,6 +3,8 @@ import SearchBar from '../components/SearchBar.jsx';
 import WeatherCard from '../components/WeatherCard.jsx';
 import Spinner from '../components/Spinner.jsx';
 
+import { Button } from "@/components/ui/button"
+
 const DEFAULT_CITIES = ["Sao Paulo", "Shanghai", "Tokyo", "Delhi", "Dhaka", "Mexico City", "Cairo", "Beijing", "Mumbai", "Osaka", "Karachi", "Chongqing", "Istanbul", "Buenos Aires", "Kolkata", "Lagos", "Kinshasa", "Manila", "Tianjin", "Guangzhou"];
 const API_KEY = import.meta.env.VITE_OPEN_WEATHER_API_KEY;
 
@@ -74,13 +76,14 @@ export default function WeatherDashboard() {
             {recentSearches.length > 0 && (
                 <div className="mt-4 flex flex-wrap justify-center gap-2">
                     {recentSearches.map((city, index) => (
-                        <button
+                        <Button
+                            variant="outline"
                             key={index}
                             onClick={() => handleSearch(city)}
                             className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition"
                         >
                             {city}
-                        </button>
+                        </Button>
                     ))}
                 </div>
             )}

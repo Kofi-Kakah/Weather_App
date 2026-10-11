@@ -1,3 +1,6 @@
+import { Card } from "@/components/ui/card"
+
+
 export default function WeatherCard({ weather }) {
   const condition = weather.weather[0];
 
@@ -12,12 +15,12 @@ export default function WeatherCard({ weather }) {
             <p className="text-2xl font-semibold">{Math.round(weather.main.temp)}°C</p>
             <p className="text-gray-600">{condition.description}</p>
 
-            <div className="mt-4">
+            <Card className="mt-4">
                 <p className="text-gray-600">Feels like: {Math.round(weather.main.feels_like)}°C</p>
                 <p className="text-gray-600">Humidity: {weather.main.humidity}%</p>
                 <p className="text-gray-600">Wind: {weather.wind.speed} m/s</p>
                 <p className="text-gray-600">Pressure: {weather.main.pressure}</p>
-            </div>
+            </Card>
         </div>
     )
 }
