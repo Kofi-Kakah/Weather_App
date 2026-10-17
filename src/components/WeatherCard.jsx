@@ -23,4 +23,4 @@ export default function WeatherCard({ weather }) {
             </Card>
         </div>
     )
-}q
+}
