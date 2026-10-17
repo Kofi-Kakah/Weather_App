@@ -74,7 +74,7 @@ weather-app/
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Kofi-Kakah/Weather_App.git
 cd weather-app
 ```
 
